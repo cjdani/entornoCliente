@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción</title>
+    <style>
+        table {
+            border: 2px solid black;
+            margin: 50px;
+            caption-side: bottom;
+        }
+
+        tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption >Título Tabla</caption>
+        <thead>
+            <tr>
+                <th colspan="3" style="text-align: left;">Mi Tabla</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cab 1</td>
+                <td>Cab 2</td>
+                <td>Cab 3</td>
+            </tr>
+            <tr>
+                <td style="background-color: red;">
+                    <p></p>
+                </td>
+                <td colspan="2" rowspan="2" style="background-color: blue;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: black;">
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: yellow;">
+                    <p></p>
+                </td>
+                <td rowspan="2" style="background-color: green;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: black;">
+                    <p></p>
+                </td>
+                <td style="background-color: black;"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
