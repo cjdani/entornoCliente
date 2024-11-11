@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Áreas</title>
+    <script>
+        function squareArea(side) {
+            return side ** 2;
+        }
+
+        function triangleArea(base, height) {
+            return base * height;
+        }
+
+        function circleArea(radius) {
+            return ((radius ** 2) * Math.PI).toFixed(2);
+        }
+
+        function calcular() {
+            document.getElementById("squareAreaResult").innerHTML = "Área del cuadrado: " + squareArea(document.getElementById("squareSide").value);
+            document.getElementById("triangleAreaResult").innerHTML = "Área del triángulo: " + triangleArea(document.getElementById("triangleBase").value, document.getElementById("triangleHeight").value);
+            document.getElementById("circleAreaResult").innerHTML = "Área del círculo: " + circleArea(document.getElementById("circleRadius").value);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Recogida de datos</h3>
+    <label>Lado del cuadrado: </label>
+    <input id="squareSide" type="number" placeholder="Introduzca el lado del cuadrado" min="1" /><br />
+    <p id="squareAreaResult">Área del cuadrado: </p>
+    <label>Base del triángulo: </label>
+    <input id="triangleBase" type="number" placeholder="Introduzca la base del triángulo" min="1" /><br />
+    <label>Altura del triángulo: </label>
+    <input id="triangleHeight" type="number" placeholder="Introduzca la altura del triángulo" min="1" /><br />
+    <p id="triangleAreaResult">Área del triángulo: </p>
+    <label>Radio del círculo: </label>
+    <input id="circleRadius" type="number" placeholder="Introduzca el radio del círculo" min="1" /><br />
+    <p id="circleAreaResult">Área del cuadrado: </p>
+    <br />
+    <button onclick="calcular()">Calcular</button>
+</body>
+
+</html>
