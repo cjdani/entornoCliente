@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Paso por valor VS paso por referencia</title>
+	<script>
+		function change(numero, bool, string) {
+
+			//Cambiamos los valores de los parámetros recibidos
+			numero *= 2;
+			bool = false;
+			string = "adios";
+
+			//Imprimimos los nuevos valores
+			document.write("<br/>"+"Durante de cambio:"+"<br/>");
+			document.write(numero+"<br/>");
+			document.write(bool+"<br/>");
+			document.write(string+"<br/>");
+		}
+	</script>
+</head>
+
+<body>
+	<script>
+
+		//Declaramos las variables y les asignamos un valor
+		numero = 1;
+		bool = true;
+		string = "hola";
+
+		//Imprimimos las variables
+		document.write("<br/>"+"Antes de cambiar:"+"<br/>")
+		document.write(numero+"<br/>");
+		document.write(bool+"<br/>");
+		document.write(string+"<br/>");
+
+		//Asignamos a una variable la referencia de la función y la ejecutamos
+		cambiar = change;
+		cambiar(numero, bool, string);
+
+		//Imprimimos las variables después de la ejecución de la función
+		document.write("<br/>"+"Después de cambiar:"+"<br/>")
+		document.write(numero+"<br/>");
+		document.write(bool+"<br/>");
+		document.write(string+"<br/>");
+	</script>
+</body>
+
+</html>
